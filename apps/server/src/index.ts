@@ -1,3 +1,13 @@
-import { randomGreeting } from '@workspace/core';
+import express from 'express';
 
-console.log(randomGreeting());
+import { randomHello } from '@workspace/core';
+
+const app = express();
+
+app.get('/', (req, res) => {
+	res.send(`${randomHello()} world`);
+});
+
+app.listen(3000, () => {
+	console.log('Server is listening');
+});
