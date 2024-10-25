@@ -1,0 +1,15 @@
+{
+	"name": "@workspace/server",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"scripts": {
+		"start": "node ./dist/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@workspace/core": "^1.0.0"
+	}
+}

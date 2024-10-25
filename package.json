@@ -1,0 +1,37 @@
+{
+	"name": "npm-workspaces",
+	"version": "1.0.0",
+	"description": "Build a simple monorepo using npm workspaces",
+	"main": "index.js",
+	"scripts": {
+		"prepare": "husky",
+		"build": "tsc --build"
+	},
+	"keywords": [
+		"workspace"
+	],
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"author": "https://github.com/alb-xh",
+	"license": "ISC",
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"eslint": "^9.13.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-react": "^7.37.2",
+		"globals": "^15.11.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"prettier": "3.3.3",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.11.0"
+	},
+	"workspaces": [
+		"apps/server",
+		"libs/core"
+	]
+}
